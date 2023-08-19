@@ -1,5 +1,13 @@
 export const Profile = ({
-  prof: { avatar, username, tag, location, followers, views, likes },
+  prof: {
+    avatar,
+    username,
+    tag,
+    location,
+    stats: { followers },
+    stats: { views },
+    stats: { likes },
+  },
 }) => {
   return (
     <div class="profile">
