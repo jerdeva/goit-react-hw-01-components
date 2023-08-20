@@ -1,3 +1,13 @@
+import { Avatar } from "./Profile.styled";
+import { UserNameParagrapher } from "./Profile.styled";
+import { TagParagrapher } from "./Profile.styled"
+import { LocationParagrapher } from "./Profile.styled"
+import { StatisticList } from "./Profile.styled"
+import { Wrapper } from "./Profile.styled"
+import {StatisticListItem} from './Profile.styled'
+import { UserCrdInfo } from './Profile.styled'
+import {StatisticListItemInfo} from './Profile.styled'
+
 export const Profile = ({
   prof: {
     avatar,
@@ -10,28 +20,28 @@ export const Profile = ({
   },
 }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{'@' + tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <Wrapper >
+      <UserCrdInfo >
+        <Avatar src={avatar} alt="User avatar"  />
+        <UserNameParagrapher >{username}</UserNameParagrapher>
+        <TagParagrapher >{'@' + tag}</TagParagrapher>
+        <LocationParagrapher>{location}</LocationParagrapher>
+      </UserCrdInfo>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <StatisticList >
+        <StatisticListItem>
+          <div >Followers</div>
+          <StatisticListItemInfo >{followers}</StatisticListItemInfo>
+        </StatisticListItem>
+        <StatisticListItem>
+          <div >Views</div>
+          <StatisticListItemInfo >{views}</StatisticListItemInfo>
+        </StatisticListItem>
+        <StatisticListItem>
+          <div >Likes</div>
+          <StatisticListItemInfo >{likes}</StatisticListItemInfo>
+        </StatisticListItem>
+      </StatisticList>
+    </Wrapper>
   );
 };

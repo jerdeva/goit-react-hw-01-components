@@ -9,12 +9,9 @@ export const TransactionHistory = ({ transaction }) => {
                 <th>Currency</th>
               </tr>
         </thead>
-        <tbody>
-            <tr>{transaction.map(operation => {
-                return (<td key={operation.id}>
-                    <TransactionHistoryTable operationInfo={operation } />
-        </td>
-
-        );
-    })}</tr></tbody></table>
+        {transaction.map(operation => {
+                return (<tbody  key={operation.id}>
+                    <TransactionHistoryTable operationInfo={operation} />
+                    </tbody>)
+    })}</table>
 };
