@@ -1,14 +1,17 @@
-export const FriendCard = ({ friendInfo }) => {
+import { FriendBio } from './Friend.styled';
+import {StatusActiv} from './Friend.styled'
+
+
+export const FriendCard = ({ friendInfo:{isOnline,avatar,name } }) => {
   return (
-    <div>
-      <span >{friendInfo.isOnline}</span>
+    <FriendBio>
+      <StatusActiv status={(isOnline)}>{isOnline} </StatusActiv>
       <img
-        
-        src={friendInfo.avatar}
+        src={avatar}
         alt="User avatar"
         width="48"
       />
-      <p >{friendInfo.name}</p>
-    </div>
+      <p >{name}</p>
+    </FriendBio>
   );
 };

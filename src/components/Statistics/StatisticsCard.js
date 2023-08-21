@@ -1,8 +1,14 @@
-export const StatisticsCard = ({statistic: {label, percentage}}) => {
+import {ListItemFormat} from './Statistics.styled'
+
+export const StatisticsCard = ({ statistic: { label, percentage } }) => {
   return (
-    <div>
-      <span>{label}</span>
-      <span>{percentage}</span>
-    </div>
+    <ListItemFormat>
+      <div>
+      <div>{label}</div>
+      <div>{percentage}</div>
+        </div>
+    </ListItemFormat>
   );
 };
+
+        

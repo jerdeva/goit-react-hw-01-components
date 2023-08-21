@@ -1,10 +1,15 @@
+import { TbodyOfTableSettingOne } from './Transactions.styled'
+import {TbodyOfTableSettingTwo} from './Transactions.styled'
+import {TbodyOfTableSettingThree} from './Transactions.styled'
+
+
+
 export const TransactionHistoryTable = ({ operationInfo }) => {
   return (
     <tr>
-
-      <td >{operationInfo.type}</td>
-      <td>{operationInfo.amount}</td>
-      <td>{operationInfo.currency}</td>
+      <TbodyOfTableSettingOne>{operationInfo.type}</TbodyOfTableSettingOne>
+      <TbodyOfTableSettingTwo>{operationInfo.amount}</TbodyOfTableSettingTwo>
+      <TbodyOfTableSettingThree>{operationInfo.currency}</TbodyOfTableSettingThree>
     </tr>
   );
 };

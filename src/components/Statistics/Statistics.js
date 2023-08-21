@@ -1,15 +1,22 @@
 import { StatisticsCard } from "./StatisticsCard";
-
+import { List } from './Statistics.styled'
+import { AreaSetting } from './Statistics.styled'
+import { StatisticsName } from './Statistics.styled'
+import {ListItem} from './Statistics.styled'
+ 
 export const Statistics = ({ dataItems }) => {
   return (
-    <ul>
+    <AreaSetting>      
+      <StatisticsName >Upload stats</StatisticsName>
+    <List>
       {dataItems.map(item => {
         return (
-          <li key={item.id}>
+          <ListItem key={item.id}>
             <StatisticsCard statistic={ item} />
-          </li>
+          </ListItem>
         );
       })}
-    </ul>
+      </List>
+      </AreaSetting>
   );
 };
