@@ -24,11 +24,26 @@ margin: 20px 8px;
 height: 12px;
 width: 12px;
 border-radius: 100%;
-background-color: ${props => {
-switch (props.status) {
-    case true:
+color: ${props => {
+    switch (props.status)
+    {
+    case 1:
        return 'green' 
-    case false:
+    case 0:
+        return 'red'
+    default:
+        return 'gray'
+        }
+    } 
+};
+font-size: 1px;
+
+background-color: ${props => {
+    switch (props.status)
+    {
+    case 1:
+       return 'green' 
+    case 0:
         return 'red'
     default:
         return 'gray'
