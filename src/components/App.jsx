@@ -13,7 +13,7 @@ export const App = () => {
   return (
     <div>
       <UserForm items={user} />
-      <Statistics dataItems = {data}/>
+      <Statistics title="UPLOAD STATS" dataItems = {data}/>
       <FriendList friendList={friend} />
       <TransactionHistory  transaction ={transaction} />
 

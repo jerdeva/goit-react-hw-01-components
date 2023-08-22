@@ -4,10 +4,10 @@ import { AreaSetting } from './Statistics.styled'
 import { StatisticsName } from './Statistics.styled'
 import {ListItem} from './Statistics.styled'
  
-export const Statistics = ({ dataItems }) => {
+export const Statistics = ({ dataItems, title }) => {
   return (
     <AreaSetting>      
-      <StatisticsName >Upload stats</StatisticsName>
+      <StatisticsName >{ title}</StatisticsName>
     <List>
       {dataItems.map(item => {
         return (
